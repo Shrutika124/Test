@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expandable Links</title>
+<style>
+  .expandable-links {
+    display: inline-block;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+  .expandable-links:hover {
+    color: #000080; /* Darker shade of blue for hover effect */
+  }
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div id="linksContainer">
+  <a class="expandable-links" onclick="toggleLinks()">More Details ▼</a>
+  <div id="expandedLinks" class="hidden">
+    <ul>
+      <li><a href="https://digital.ahrq.gov/program-overview/success-stories">Success Stories:</a></li>
+      <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3336198/">Case Studies:</a></li>
+      <li><a href="PosterApp.html">Click for Software Details</a></li>
+      <li><a href="https://www.intechopen.com/books/3610">Advancements</a></li>
+  
+    </ul>
+  </div>
+</div>
+
+<script>
+  function toggleLinks() {
+    var expandedLinks = document.getElementById("expandedLinks");
+    if (expandedLinks.classList.contains("hidden")) {
+      expandedLinks.classList.remove("hidden");
+      expandedLinks.classList.add("visible");
+    } else {
+      expandedLinks.classList.remove("visible");
+      expandedLinks.classList.add("hidden");
+    }
+  }
+</script>
+
+</body>
+</html>
